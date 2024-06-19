@@ -1,7 +1,6 @@
 pipeline {
-agent {
-    docker {
-        image 'grapeupci/ubuntu-kubectl:1.0.0'
+agent any
+    
     }
 }
     options {
