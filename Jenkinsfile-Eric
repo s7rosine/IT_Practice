@@ -1,8 +1,6 @@
 pipeline {
-agent any
-    
-    }
-}
+    agent any
+
     options {
         buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '3', numToKeepStr: '3'))
         disableConcurrentBuilds()
@@ -14,7 +12,7 @@ agent any
         stage('Test') {
             steps {
                 sh '''
-                kubectl 
+                kubectl version
                 pwd
                 uname -r 
                 touch eric
